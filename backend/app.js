@@ -10,7 +10,7 @@ const app = express();
 
 mongoose
   .connect(
-    "mongodb://127.0.0.1/node-angular"
+    process.env.MONGO_DB_URL
   )
   .then(() => {
     console.log("Connected to database!");
